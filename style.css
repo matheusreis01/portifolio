@@ -1,7 +1,7 @@
 header{
     text-align: center;
     top: 300px;
-    background-color: rgba(14, 9, 17, 0.758);
+    background-color: rgb(112, 116, 178);
     font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
    
@@ -23,11 +23,11 @@ li{
     margin: 15px auto;
     padding: 10px 0;
     width: 30% ;
-    background-color: gray;
+    background-color: rgb(90, 85, 173);
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    color: black;
+    color: #ffffff;
 }
 li:hover{
     width: 32%;
@@ -48,7 +48,7 @@ a{
 footer{
 text-align: center;
 text-decoration: none;
-background-color: rgba(14, 9, 17, 0.758);
+background-color: rgba(86, 97, 163, 0.758);
 }
 
 footer img{
