@@ -1,68 +1,67 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estação do Ano</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            transition: background-color 1s;
-        }
-    </style>
-</head>
-<body>
-    <h1>Descubra a estação do ano!</h1>
-    <input type="text" id="mesInput" placeholder="Digite o nome do mês">
-    <button onclick="verificarEstacao()">Verificar</button>
-    <p id="resultado"></p>
-
-    <script>
-        function verificarEstacao() {
-            // Captura o valor digitado pelo usuário e transforma para maiúsculo
-            const mes = document.getElementById("mesInput").value.toUpperCase();
-            const resultado = document.getElementById("resultado");
-
-            // Define a estação com base no mês
-            let estacao;
-            let corFundo;
-
-            switch (mes) {
-                case 'JANEIRO':
-                case 'FEVEREIRO':
-                case 'MARÇO':
-                    estacao = "Verão";
-                    corFundo = "#FF5733"; // Cor de fundo para verão
-                    break;
-                case 'ABRIL':
-                case 'MAIO':
-                case 'JUNHO':
-                    estacao = "Outono";
-                    corFundo = "#FF8C00"; // Cor de fundo para outono
-                    break;
-                case 'JULHO':
-                case 'AGOSTO':
-                case 'SETEMBRO':
-                    estacao = "Inverno";
-                    corFundo = "#ADD8E6"; // Cor de fundo para inverno
-                    break;
-                case 'OUTUBRO':
-                case 'NOVEMBRO':
-                case 'DEZEMBRO':
-                    estacao = "Primavera";
-                    corFundo = "#98FB98"; // Cor de fundo para primavera
-                    break;
-                default:
-                    estacao = "Mês inválido. Tente novamente!";
-                    corFundo = "#ffffff"; // Cor neutra se o mês não for válido
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estação do Ano</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 50px;
             }
+        </style>
+    </head>
+    <body>
+        <h1>Descubra a estação do ano!</h1>
+        <input type="text" id="mesInput" placeholder="Digite o nome do mês">
+        <button onclick="verificarEstacao()">Verificar</button>
+        <p id="resultado"></p>
 
-            // Exibe a estação e altera o fundo da página
-            resultado.innerHTML = estacao;
-            document.body.style.backgroundColor = corFundo;
-        }
-    </script>
-</body>
-</html>
+        <script>
+            function verificarEstacao() {
+                // Captura o valor digitado pelo usuário e transforma para maiúsculo
+                const mes = document.getElementById("mesInput").value.toUpperCase();
+                const resultado = document.getElementById("resultado");
+
+                // Define a estação com base no mês
+                let estacao;
+                let corFundo;
+
+                switch (mes) {
+                    case 'JANEIRO':
+                    case 'FEVEREIRO':
+                    case 'MARÇO':
+                        estacao = "Verão";
+                        corFundo = "#FF5733"; // Cor de fundo para verão
+                        break;
+                    case 'ABRIL':
+                    case 'MAIO':
+                    case 'JUNHO':
+                        estacao = "Outono";
+                        corFundo = "#FF8C00"; // Cor de fundo para outono
+                        break;
+                    case 'JULHO':
+                    case 'AGOSTO':
+                    case 'SETEMBRO':
+                        estacao = "Inverno";
+                        corFundo = "#ADD8E6"; // Cor de fundo para inverno
+                        break;
+                    case 'OUTUBRO':
+                    case 'NOVEMBRO':
+                    case 'DEZEMBRO':
+                        estacao = "Primavera";
+                        corFundo = "#98FB98"; // Cor de fundo para primavera
+                        break;
+                    default:
+                        estacao = "Mês inválido. Tente novamente!";
+                        corFundo = "#ffffff"; // Cor neutra se o mês não for válido
+                }
+
+                // Exibe a estação e altera o fundo da página
+                resultado.innerHTML = estacao;
+                document.body.style.backgroundColor = corFundo;
+            }
+        </script>
+    </body>
+    </html>
