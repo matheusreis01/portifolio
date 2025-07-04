@@ -4,17 +4,17 @@ function contar () {
 
     MostraResultado.innerHTML =`<p><b> Contando de 1 ate 10</b></p>`
 
-    let contador = 1; 
+    let contador = 10; 
     
-    while (contador <= 10) {
+    while (contador >= 1) {
         let numero = contador % 2;
  
     if (numero == 0) {
-         MostraResultado.innerHTML += `<mark> ${contador} </mark> &#x1F449 `;
+         MostraResultado.innerHTML += `${contador} &#x1F449 `;
     }else{
-          MostraResultado.innerHTML += `${contador} &#x1F449 `;
+          MostraResultado.innerHTML +=`<mark> ${contador} </mark> &#x1F449 `;;
     }
-    contador+=1;
+    contador-=1;
 }
 
     MostraResultado.innerHTML += `&#x1F3C1`;

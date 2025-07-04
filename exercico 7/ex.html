@@ -1,48 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>desafio</title>
-</head>
-<body> 
-    </style>
+    <title>exercício 7</title>
 </head>
 <body>
-
-    <button id="btnClique">Clique aqui!</button>
-    <button id="btnZerar">Zerar</button>
-
-    <div id="contagem">Cliques: 0</div>
-    <div id="emoticons"></div>
-
-    <script>
-        let contador = 0;
-
-        const btnClique = document.getElementById('btnClique');
-        const btnZerar = document.getElementById('btnZerar');
-        const contagemDiv = document.getElementById('contagem');
-        const emoticonsDiv = document.getElementById('emoticons');
-
-        btnClique.addEventListener('click', () => {
-            contador++;
-            atualizarContagem();
-        });
-
-        btnZerar.addEventListener('click', () => {
-            contador = 0;
-            atualizarContagem();
-            emoticonsDiv.textContent = '';  // Limpa os emoticons ao zerar
-        });
-
-        function atualizarContagem() {
-            contagemDiv.textContent = `Cliques: ${contador}`;
-
-            // A cada 10 cliques, adiciona um emoticon (◕‿◕)
-            let quantidadeEmoticons = Math.floor(contador / 10);
-            emoticonsDiv.textContent = '◕‿◕'.repeat(quantidadeEmoticons);
-        }
-    </script>
-
+  <h1> Botão cliques</h1>
+  <button onclick="botao()"> adiciona cliques</button>
+  <button onclick="botaozero()">zera os cliques</button>
+  <div id="resultado">
+    <p>Número de cliques:</p>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

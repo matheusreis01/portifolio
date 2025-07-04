@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Campeonato de Basquete 3x3 - Inscrição</title>
+  <title>Exercício 6</title>
   <style>
-    /* Import modern font from Google Fonts */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
 
     :root {
@@ -23,7 +24,7 @@
       --transition-speed: 0.3s;
     }
 
-    /* Reset and global */
+
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -53,7 +54,7 @@
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 50px;
       font-weight: 700;
       color: var(--color-text-primary);
       margin: 0 0 calc(var(--spacing-unit) * 2);
@@ -86,15 +87,15 @@
 
     button:hover,
     button:focus {
-      background-color: #1f2937; /* slightly lighter black */
+      background-color: #60a2ff; 
       transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(17,24,39,0.4);
+      box-shadow: 0 6px 20px rgba(112, 158, 255, 0.4);
       outline: none;
     }
 
     button:active {
       transform: scale(0.98);
-      box-shadow: 0 3px 6px rgba(17,24,39,0.6);
+      box-shadow: 0 3px 6px rgba(93, 144, 255, 0.6);
     }
 
     .stats {
@@ -126,7 +127,6 @@
       color: var(--color-accent);
     }
 
-    /* Alert styling */
     .alert {
       margin-top: calc(var(--spacing-unit) * 3);
       background-color: var(--color-alert-bg);
@@ -135,7 +135,7 @@
       border-radius: var(--border-radius);
       font-weight: 700;
       font-size: 18px;
-      box-shadow: 0 3px 10px rgba(253, 230, 138, 0.6);
+      box-shadow: 0 3px 10px rgba(246, 219, 112, 0.6);
       opacity: 0;
       transform: translateY(-10px);
       transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -164,7 +164,7 @@
     <p class="subtitle">Clique abaixo para inscrever seu interesse no campeonato.</p>
 
     <button id="registerBtn" type="button" aria-live="polite" aria-describedby="teamsCount">
-      Inscrever Interesse
+     tenho interesse
     </button>
 
     <section class="stats" aria-live="polite" aria-atomic="true" aria-relevant="additions removals" role="region" aria-label="Informações de inscritos e equipes formadas">
@@ -209,7 +209,6 @@
         updateDisplay();
       });
 
-      // Initialize display
       updateDisplay();
     })();
   </script>
